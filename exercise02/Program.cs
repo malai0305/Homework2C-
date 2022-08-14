@@ -1,12 +1,17 @@
 ﻿// По двум заданным числам проверить является ли одно квадратом другого.
-int a = 4;
-int b = 3;
-if ( a*a == b)
+Console.Clear();
+System.Console.WriteLine();
+
+int[] num = new int[2];
+string Result = "не является";
+
+for (int i = 0; i < 2; i++)
 {
-    Console.WriteLine("YES");
+    num[i] = new Random().Next(1, 1000);
 }
-else if( a*a < b ) if ( a*a > b )
-{
-    Console.WriteLine("NO");
-}
+
+if (num[0] / num[1] == num[1]) Result = Result.Replace("не ", "");
+
+System.Console.WriteLine($"Число {num[0]} {Result} квадратом числа {num[1]}");
+System.Console.WriteLine();
     
